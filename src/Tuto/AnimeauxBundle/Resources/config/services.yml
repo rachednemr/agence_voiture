@@ -1,0 +1,7 @@
+parameters:
+#    tuto_animeaux.example.class: Tuto\AnimeauxBundle\Example
+
+services:
+#    tuto_animeaux.example:
+#        class: %tuto_animeaux.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
