@@ -34,6 +34,13 @@ class voiture
      * @ORM\Column(name="gamme", type="string", length=255)
      */
     private $gamme;
+    /**
+     * @var string $version
+     *
+     * @ORM\Column(name="version", type="string", length=255)
+     */
+    private $version;
+    
 
     /**
      * @var datetime $date_fabrication

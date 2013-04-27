@@ -143,6 +143,11 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // TutoAnimeauxBundle_homepage
+        if ($pathinfo === '/AddCar') {
+            return array (  '_controller' => 'TutoAnimeauxBundle:Add:addCar',  '_route' => 'TutoAnimeauxBundle_homepage',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
