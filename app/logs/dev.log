@@ -260,3 +260,5 @@
 [2013-04-27 13:36:16] event.DEBUG: Notified event "kernel.response" to listener "Sensio\Bundle\FrameworkExtraBundle\EventListener\CacheListener::onKernelResponse". [] []
 [2013-04-27 13:36:16] event.DEBUG: Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelResponse". [] []
 [2013-04-27 13:36:16] event.DEBUG: Notified event "kernel.response" to listener "Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener::onKernelResponse". [] []
+[2013-04-27 14:41:45] doctrine.DEBUG: SET NAMES UTF8 ([]) [] []
+[2013-04-27 14:41:45] doctrine.DEBUG: CREATE TABLE voiture (id INT AUTO_INCREMENT NOT NULL, model VARCHAR(255) NOT NULL, gamme VARCHAR(255) NOT NULL, date_fabrication DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = InnoDB ([]) [] []
