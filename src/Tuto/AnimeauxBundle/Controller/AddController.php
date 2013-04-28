@@ -8,6 +8,6 @@ class AddController extends Controller
 {
     public function addCarAction()
     {
-        return $this->render('TutoAnimeauxBundle:Add:index.html.twig');
+        return $this->render('TutoAnimeauxBundle:Add:index.html.twig', array('value' => $this->getRequest()->getSession()->get('value')));
     }
 }
