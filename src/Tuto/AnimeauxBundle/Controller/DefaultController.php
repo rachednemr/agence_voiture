@@ -10,6 +10,7 @@ class DefaultController extends Controller
 {
     
     public function indexAction()
+<<<<<<< HEAD
     {
         $voit=$this->getDoctrine()->getEntityManager();
         $voitures=$voit->getRepository("TutoAnimeauxBundle:voiture")->findAll();
@@ -40,6 +41,7 @@ class DefaultController extends Controller
        $voit->flush();*/
         
         return $this->render('TutoAnimeauxBundle:Default:Ajout.html.twig', array('form'=>$form->createView(),));
+>>>>>>> 8fba135ffb23ae62484960797993ca5fd96e64d7
     }
     
     

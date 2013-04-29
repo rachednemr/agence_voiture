@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #TutoAnimeauxBundle_homepage:
  #  pattern:  /
  #  defaults: { _controller: TutoAnimeauxBundle:Add:index }
@@ -7,3 +8,7 @@ TutoAnimeauxBundle_ajout:
 TutoAnimeauxBundle_index:
     pattern:  /index
     defaults: { _controller: TutoAnimeauxBundle:Default:index }
+TutoAnimeauxBundle_addCarpage:
+    pattern:  /AddCar
+    defaults: { _controller: TutoAnimeauxBundle:Add:addCar }
+>>>>>>> 8fba135ffb23ae62484960797993ca5fd96e64d7
