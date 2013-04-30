@@ -31,23 +31,17 @@ class voiture
     /**
      * @var string $gamme
      *
-     * @ORM\Column(name="gamme", type="string", length=255)
+     * @ORM\Column(name="gamme", type="string", length=255,nullable=true)
      */
     private $gamme;
-    /**
-     * @var string $version
-     *
-     * @ORM\Column(name="version", type="string", length=255)
-     */
-    private $version;
     
 
     /**
-     * @var datetime $date_fabrication
+     * @var datetime $date
      *
-     * @ORM\Column(name="date_fabrication", type="datetime")
+     * @ORM\Column(name="date", type="datetime")
      */
-    private $date_fabrication;
+    private $date;
 
 
     /**
@@ -101,22 +95,27 @@ class voiture
     }
 
     /**
-     * Set date_fabrication
+     * Set date
      *
-     * @param datetime $dateFabrication
+     * @param datetime $date
      */
-    public function setDateFabrication($dateFabrication)
+     function __construct()
     {
-        $this->date_fabrication = $dateFabrication;
+         
+         $this->date =new \DateTime();
+    }
+    public function setDate($date)
+    {
+        $this->date = $date;
     }
 
     /**
-     * Get date_fabrication
+     * Get date
      *
      * @return datetime 
      */
-    public function getDateFabrication()
+    public function getDate()
     {
-        return $this->date_fabrication;
+        return $this->date;
     }
 }
