@@ -11,34 +11,26 @@ class DefaultController extends Controller
     
     public function indexAction()
     {
-        $voit=$this->getDoctrine()->getEntityManager();
-        $voitures=$voit->getRepository("TutoAnimeauxBundle:voiture")->findAll();
+        $entityManager=$this->getDoctrine()->getEntityManager();
+        $voitures=$entityManager->getRepository("TutoAnimeauxBundle:voiture")->findAll();
         return $this->render('TutoAnimeauxBundle:Default:index.html.twig', array('voitures' => $voitures));
     }
     
     public function ajoutAction()
     {
-        $voit=$this->getDoctrine()->getEntityManager();
-        $voitu=new voiture();
-        $form=$this->createForm(new voitureType(),$voitu);
+        $entityManager=$this->getDoctrine()->getEntityManager();
+        $voiture=new voiture();
+        $form=$this->createForm(new voitureType(),$voiture);
         $request=$this->getRequest();
-        
+
         $form->bindRequest($request);
         if($form->isValid())
-            {
-            
-            $voitu=$form->getData();
-            $voit->persist($voitu);
-            $voit->flush();
-           // return $this->redirect($this->generateUrl("TutoAnimeauxBundle_index"));
-            }
-        /*$v=  new voiture(); 
-        $v->setModel("mersedes2");
-       $v->setGamme("honda");
-        $v->setDateFabrication(new \DateTime());
-        $voit->persist($v);//garder en memoire
-       $voit->flush();*/
-        
+        {
+
+            $voiture=$form->getData();
+            $entityManager->persist($voiture);
+            $entityManager->flush();
+
         return $this->render('TutoAnimeauxBundle:Default:Ajout.html.twig', array('form'=>$form->createView(),));
     }
     

@@ -6,26 +6,34 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Acme\StoreBundle\Entity\Product
+ * @ORM\Entity
+ * @ORM\Table(name="product")
  */
 class Product
 {
     /**
      * @var integer $id
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string $name
+     * @ORM\Column(type="string", length = 100)
      */
     private $name;
 
     /**
      * @var float $price
+     * @ORM\Column(type="decimal", scale = 2)
      */
     private $price;
 
     /**
      * @var text $description
+     * @ORM\Column(type="text")
      */
     private $description;
 
